@@ -1,0 +1,2 @@
+rootProject.name = "IPark"
+include ':app'
