@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class AddCarActivity extends AppCompatActivity {
 
@@ -31,6 +32,8 @@ public class AddCarActivity extends AppCompatActivity {
         add_car.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(AddCarActivity.this, "Car added",
+                        Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 startActivity(intent);
             }

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -21,6 +22,8 @@ public class RegisterActivity extends AppCompatActivity {
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(RegisterActivity.this, "Successfully registered!",
+                        Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 startActivity(intent);
             }

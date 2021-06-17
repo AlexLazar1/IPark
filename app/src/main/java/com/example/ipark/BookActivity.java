@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class BookActivity extends AppCompatActivity {
 
@@ -30,6 +31,8 @@ public class BookActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(BookActivity.this, "Park booked!",
+                        Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 startActivity(intent);
             }
