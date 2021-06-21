@@ -17,7 +17,8 @@ import com.example.ipark.databinding.ActivityMapsBinding;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback{
 
-    private GoogleMap mMap;
+    private GoogleMap mMap, mMap2, mMap3, mMap4, mMap5;
+
     private ActivityMapsBinding binding;
 
     @Override
@@ -58,10 +59,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap2 = googleMap;
+        mMap3 = googleMap;
+        mMap4 = googleMap;
+        mMap5 = googleMap;
 
         // Add a marker in Sydney and move the camera 44.439663, 26.096306.
         LatLng bucharest = new LatLng(44.439663, 26.096306);
-        mMap.addMarker(new MarkerOptions().position(bucharest).title("Marker in Bucharest"));
+        mMap.addMarker(new MarkerOptions().position(bucharest).title("C.A. Rosseti Parking 8/15")).showInfoWindow();
+        //44.435215, 26.102062 Universitate
+        LatLng bucharest2 = new LatLng(44.435215, 26.102062);
+        mMap2.addMarker(new MarkerOptions().position(bucharest2).title("University Square Parking 280/1000")).showInfoWindow();;
+        //Edgar Q 44.438239, 26.098032
+        LatLng bucharest3 = new LatLng(44.438239, 26.098032);
+        mMap3.addMarker(new MarkerOptions().position(bucharest3).title("Edgar Quinet Parking 2/10")).showInfoWindow();
+        //Piata Romana 44.446130, 26.095618
+        LatLng bucharest4 = new LatLng(44.446130, 26.095618);
+        mMap4.addMarker(new MarkerOptions().position(bucharest4).title("Roman Square Parking 49/50")).showInfoWindow();
+        //Cocor 44.430409, 26.104641
+        LatLng bucharest5   = new LatLng(44.430409, 26.104641);
+        mMap5.addMarker(new MarkerOptions().position(bucharest5).title("Cocor Parking 30/50")).showInfoWindow();
+
+
         mMap.moveCamera(CameraUpdateFactory.newLatLng(bucharest));
+        //mMap2.moveCamera(CameraUpdateFactory.newLatLng(bucharest2));
+        //mMap3.moveCamera(CameraUpdateFactory.newLatLng(bucharest3));
+        //mMap4.moveCamera(CameraUpdateFactory.newLatLng(bucharest4));
+        //mMap5.moveCamera(CameraUpdateFactory.newLatLng(bucharest5));
     }
 }
